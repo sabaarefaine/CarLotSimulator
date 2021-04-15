@@ -3,6 +3,13 @@ namespace CarLotSimulator
 {
     public class Car
     {
+
+        public Car()
+        {
+            //every time car constructor used, car is added to numberofcars
+            CarLot.numberOfCars++;
+            //call class name & static member
+        }
         //passing through constructor method
         public Car(int year, string make, string model, string engine, string honk, bool driveable)
         {
@@ -14,10 +21,6 @@ namespace CarLotSimulator
             this.IsDriveable = driveable;
         }
 
-        public Car()
-        {
-
-        }
         //Car shall have the following properties: Year, Make, Model, EngineNoise, HonkNoise, IsDriveable
 
         public int Year { get; set; }

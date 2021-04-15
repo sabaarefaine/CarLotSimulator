@@ -42,13 +42,14 @@ namespace CarLotSimulator
             //passing through constructor
             var thirdVehicle = new Car(2020, "Audi", "Q5", "vrrooom", "beeeep", true);
 
-
             //LIST
             var onLot = new CarLot();
 
             onLot.Cars.Add(firstVehicle);
             onLot.Cars.Add(secondVehicle);
             onLot.Cars.Add(thirdVehicle);
+
+            Console.WriteLine($"Number of cars created: {CarLot.numberOfCars}");
 
             foreach (Car vehicle in onLot.Cars)
             {
